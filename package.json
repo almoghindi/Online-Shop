@@ -1,0 +1,16 @@
+{
+  "name": "market",
+  "version": "1.0.0",
+  "description": "Building an online shopping website",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^8.0.1"
+  },
+  "scripts": {
+    "install:app": "concurrently \"cd frontend && yarn\" \"cd backend && composer install\"",
+    "start": "concurrently \"cd frontend && yarn start\" \"cd backend && php artisan serve\"",
+    "start:frontend": "cd frontend && yarn start",
+    "start:backend": "cd backend && php artisan serve"
+  }
+}
